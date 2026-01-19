@@ -69,8 +69,10 @@ export default function App() {
 function GetName(){
   let nameGiven = prompt("Set a name first")
   if (nameGiven != null){
-    nameSet = true;
-    NAME = nameGiven;
+    if (nameGiven != "") {
+      nameSet = true;
+      NAME = nameGiven;
+    }
   }
   else{
     alert("No name given. You cannot chat until you give a name.")
